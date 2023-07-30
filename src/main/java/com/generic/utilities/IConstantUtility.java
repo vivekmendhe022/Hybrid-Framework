@@ -7,4 +7,6 @@ package com.generic.utilities;
  */
 public interface IConstantUtility {
 
+	String ECELFILEPATH=".\\src\\test\\resources\\TestData.xlsx";
+	String PROPERTIESFILEPATH=".\\src\\test\\resources\\CommonData.properties";
 }
