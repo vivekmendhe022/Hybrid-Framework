@@ -12,8 +12,14 @@ import org.testng.ITestResult;
  */
 public class RetryAnalyserUtility implements IRetryAnalyzer {
 
+	int count = 0;
+	int retryCount = 5;
+
 	public boolean retry(ITestResult result) {
-		// TODO Auto-generated method stub
+		while (retryCount > count) {
+			count++;
+			return true;
+		}
 		return false;
 	}
 

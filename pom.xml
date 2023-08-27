@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.selenium</groupId>
 	<artifactId>ProjectFramework</artifactId>
@@ -23,7 +25,8 @@
 
 	<dependencies>
 		<!-- This is selenium web driver -->
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -31,14 +34,16 @@
 		</dependency>
 
 		<!-- This tool manages the driver executables -->
-		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<!--
+		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>3.8.1</version>
 		</dependency>
 
-		<!-- This is the Apache POI library used for reading and writing Microsoft Office formats -->
+		<!-- This is the Apache POI library used for reading and writing
+		Microsoft Office formats -->
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -46,7 +51,8 @@
 			<version>5.0.0</version>
 		</dependency>
 
-		<!-- This is the Apache POI library used for handling OOXML formats (xlsx, docx, pptx, etc.) -->
+		<!-- This is the Apache POI library used for handling OOXML formats
+		(xlsx, docx, pptx, etc.) -->
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -62,7 +68,8 @@
 			<version>8.0.27</version>
 		</dependency>
 
-		<!-- This is the Apache Commons IO library, which provides utility classes, 
+		<!-- This is the Apache Commons IO library, which provides utility
+		classes, 
 		stream implementations, file filters, and end-of-line handling. 
 		It is a library of utilities to assist with developing IO functionality. -->
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
@@ -72,9 +79,11 @@
 			<version>2.11.0</version>
 		</dependency>
 
-		<!-- This is the TestNG library, a testing framework for Java that's designed 
+		<!-- This is the TestNG library, a testing framework for Java that's
+		designed 
 		to cover all categories of tests including unit, functional, end-to-end, 
-		integration, etc. It provides a lot of powerful features such as flexible test configuration, 
+		integration, etc. It provides a lot of powerful features such as flexible test
+		configuration, 
 		support for data-driven testing, and more. -->
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>

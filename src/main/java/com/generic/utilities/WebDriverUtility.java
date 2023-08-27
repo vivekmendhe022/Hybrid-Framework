@@ -1,12 +1,18 @@
 package com.generic.utilities;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.io.Files;
 
 /**
  * This class contains useful methods of selenium web driver to perform action
@@ -89,6 +95,22 @@ public class WebDriverUtility {
 	public void mouseHoverAction(WebDriver d, int xOffset, int yOffset) {
 		Actions actions = new Actions(d);
 		actions.moveByOffset(xOffset, yOffset);
+	}
+
+	/**
+	 * This method will capture the screen shot of whole web page
+	 * @param d
+	 * @param screenShotName
+	 * @return
+	 * @throws IOException
+	 */
+	public String takeScreenShot(WebDriver d, String screenShotName) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) d;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		String path = "\\Screenshot\\" + screenShotName + ".png";
+		File dst = new File(path);
+		Files.copy(src, dst);
+		return dst.getAbsolutePath();
 	}
 
 }
