@@ -7,6 +7,8 @@ package com.generic.utilities;
  */
 public interface IConstantUtility {
 
-	String ECELFILEPATH=".\\src\\test\\resources\\TestData.xlsx";
+	String EXCELFILEPATH=".\\src\\test\\resources\\TestData.xlsx";
 	String PROPERTIESFILEPATH=".\\src\\test\\resources\\CommonData.properties";
+	String EXTENTREPORTPATH = ".\\ExtentReports\\Report - " + new JavaUtility().getSystemDateInFormate() + ".html";
+	
 }

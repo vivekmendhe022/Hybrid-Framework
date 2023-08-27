@@ -18,13 +18,7 @@ import com.object.repository.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-/**
- * This class contains all TestNG basic functionality & generic utility objects
- * 
- * @author Vivek M
- *
- */
-public class BaseClass {
+public class BaseClass2 {
 
 	public JavaUtility jutil = new JavaUtility();
 	public WebDriverUtility wutil = new WebDriverUtility();
@@ -32,7 +26,6 @@ public class BaseClass {
 	public PropertiesFileUtility putil = new PropertiesFileUtility();
 
 	public WebDriver d = null;
-	public static WebDriver SDriver;
 
 	@BeforeSuite
 	public void BSConfig() {
@@ -49,7 +42,7 @@ public class BaseClass {
 	public void BCConfig() throws IOException {
 
 		String BROWSER = putil.readDataFromPropertyFile("browser");
-		String URL = putil.readDataFromPropertyFile("url");
+		String URL = putil.readDataFromPropertyFile("bard_url");
 
 		if (BROWSER.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -67,8 +60,6 @@ public class BaseClass {
 			System.out.println("***** Invalid Browser Name: enter 'chrome' 'firefox' 'edge' ");
 		}
 
-		SDriver = d;
-
 		// Maximizing web page
 		wutil.maximizeWebPage(d);
 		// Wait for 30 seconds to page load
@@ -77,20 +68,7 @@ public class BaseClass {
 		d.get(URL);
 	}
 
-	@BeforeMethod
-	public void BMConfig() throws IOException {
-		String USERNAME = putil.readDataFromPropertyFile("username");
-		String PASSWORD = putil.readDataFromPropertyFile("password");
-		LoginPage lp = new LoginPage(d);
-		lp.loginToApplication(USERNAME, PASSWORD);
-	}
-
-	@AfterMethod
-	public void AMConfig() {
-		HomePage hp = new HomePage(d);
-		hp.logoutFromApplication(d);
-	}
-
+	
 	@AfterClass
 	public void ACConfig() {
 		d.quit();
